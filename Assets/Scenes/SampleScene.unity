@@ -624,9 +624,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6a6df342b52d24092cf6bbb590c535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveHeight: 0.5
+  waveHeight: 5
   waveFrequency: 0.5
-  waveLength: 0.75
+  waveLength: 2
   waveOriginPosition: {x: 0, y: 0, z: 0}
 --- !u!23 &454354963
 MeshRenderer:
@@ -2471,7 +2471,7 @@ PrefabInstance:
     - target: {fileID: 1643494347936539460, guid: 7cd26e6d162456b4e97d5a63b022a6ab,
         type: 3}
       propertyPath: Speed
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd26e6d162456b4e97d5a63b022a6ab, type: 3}
