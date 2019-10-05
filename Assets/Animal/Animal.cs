@@ -94,8 +94,14 @@ public class Animal : MonoBehaviour
             _state = State.Boarding;
             _rb.AddForce(Vector3.up * JumpForce);
             _target = position;
+            GameManager.Instance.AddScore(1);
             StartCoroutine(this.DelayedDo(3, () => _state = State.Idle));
         }
+    }
+
+    public void Leave()
+    {
+        GameManager.Instance.AddScore(-1);    
     }
 
 

@@ -13,4 +13,13 @@ public class boat : MonoBehaviour
             animal.Board(transform.position);
         }
     }
+
+    private void OnTriggerLeave(Collider collider)
+    {
+        collider.TryGetComponent<Animal>(out var animal);
+        if (animal != null)
+        {
+            animal.Leave();
+        }
+    }
 }
