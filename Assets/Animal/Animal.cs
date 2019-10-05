@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 enum State {
     Scared,
     Idle,
+    Boarding,
 }
 
 public class Animal : MonoBehaviour
@@ -16,7 +17,9 @@ public class Animal : MonoBehaviour
     private bool _scared;
     private Vector3 direction;
     private State _state = State.Idle;
+    private Vector3 _target;
 
+    [SerializeField] private float JumpForce = 500;
     [SerializeField] private float Speed = 5;
     [SerializeField] private float[] RandomRange = new float[2] {1, 6};
 
@@ -48,6 +51,9 @@ public class Animal : MonoBehaviour
             case State.Scared:
                 Scared();
                 break;
+            case State.Boarding:
+                Boarding();
+                break;
         }
     }
 
@@ -69,7 +75,37 @@ public class Animal : MonoBehaviour
     {
         _state = State.Scared;
         direction = (transform.position - position).normalized;
-        StartCoroutine(this.DelayedDo(3, () => _state = State.Idle));
+        StartCoroutine(this.DelayedDo(3, Calm));
+    }
+
+    public void Calm()
+    {
+        if (_state != State.Boarding)
+        {
+            _state = State.Idle;
+        }
+    }
+
+
+    public void Board(Vector3 position)
+    {
+        if (transform.position.y < 6)
+        {
+            _state = State.Boarding;
+            _rb.AddForce(Vector3.up * JumpForce);
+            _target = position;
+            StartCoroutine(this.DelayedDo(3, () => _state = State.Idle));
+        }
+    }
+
+
+    public void Boarding()
+    {
+        direction = (_target - transform.position).normalized;
+        var newVel = direction * Speed;
+        newVel.y = _rb.velocity.y;
+        _rb.velocity = newVel;
+
     }
 }
 
