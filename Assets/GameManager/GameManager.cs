@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject Animal;
+    public GameObject Kangaroo;
+    public GameObject Mammoo;
     public static GameManager Instance = null;
 
     public int score = 0;
-    public int animals = 5;
+    private int animals;
+    public int mammoths = 3;
+    public int kangaroos = 6;
 
     private void Awake()
     {
@@ -18,18 +21,26 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        AddAnimals(animals);
+        animals = mammoths + kangaroos;
+        AddAnimals();
     }
 
 
-    void AddAnimals(int amount)
+    void AddAnimals()
     {
-        for (int i=0; i < amount; i++)
+        for (int i=0; i < kangaroos; i++)
         {
-            var spawn = new Vector3(Random.Range(138, 145), Random.Range(6, 14), Random.Range(125, 145));
-            Instantiate(Animal, spawn, Animal.transform.rotation);
+            var spawn = new Vector3(Random.Range(256, 300), Random.Range(6, 14), Random.Range(203, 223));
+            Instantiate(Kangaroo, spawn, Kangaroo.transform.rotation);
         }
-            
+
+        for (int i = 0; i < mammoths; i++)
+        {
+            var spawn = new Vector3(Random.Range(256, 300), Random.Range(6, 14), Random.Range(203, 223));
+            Instantiate(Mammoo, spawn, Mammoo.transform.rotation);
+        }
+
+
     }
 
     public void Reset()
