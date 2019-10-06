@@ -16,6 +16,5 @@ public class FollowAndLookAtPlayer : MonoBehaviour
     void FixedUpdate()
     {
         transform.position = Vector3.SmoothDamp(transform.position, Target.position - offset, ref velocity, 1f);
-        //transform.LookAt(Target);
     }
 }

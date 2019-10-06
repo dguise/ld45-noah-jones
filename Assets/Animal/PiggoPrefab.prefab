@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b89358d4b081741ab580456f32fb7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 500
+  JumpForce: 800
   Speed: 3
   RandomRange:
   - 1
@@ -118,11 +118,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 110183640577186006}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 2388d8d0d476e4744bc2de3b3c395da8,
-        type: 3}
-      propertyPath: m_Name
-      value: piggo4
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2388d8d0d476e4744bc2de3b3c395da8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -187,6 +182,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 99.99997
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 2388d8d0d476e4744bc2de3b3c395da8,
+        type: 3}
+      propertyPath: m_Name
+      value: piggo4
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: 2388d8d0d476e4744bc2de3b3c395da8,
         type: 3}

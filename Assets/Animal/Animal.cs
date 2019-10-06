@@ -82,11 +82,16 @@ public class Animal : MonoBehaviour
         _rb.velocity = newVel;
     }
 
+    Coroutine delayedCalm = null;
     public void Scare(Vector3 position)
     {
         _state = State.Scared;
         direction = (transform.position - position).normalized;
-        StartCoroutine(this.DelayedDo(3, Calm));
+        if (delayedCalm != null)
+        {
+            StopCoroutine(delayedCalm);
+        }
+        delayedCalm = StartCoroutine(this.DelayedDo(3, Calm));
     }
 
     public void Calm()
