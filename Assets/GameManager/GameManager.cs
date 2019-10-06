@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject Kangaroo;
     public GameObject Mammoo;
+    public GameObject Pigo;
     public static GameManager Instance = null;
 
     public int score = 0;
@@ -43,6 +44,11 @@ public class GameManager : MonoBehaviour
             Instantiate(Mammoo, spawn, Mammoo.transform.rotation);
         }
 
+        for (int i = 0; i < pig; i++)
+        {
+            var spawn = new Vector3(Random.Range(256, 300), Random.Range(6, 14), Random.Range(203, 223));
+            Instantiate(Pigo, spawn, Pigo.transform.rotation);
+        }
 
     }
 
