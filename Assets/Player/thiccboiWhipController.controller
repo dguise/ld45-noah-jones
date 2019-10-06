@@ -64,7 +64,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Whip
+    m_ConditionEvent: DoWhip
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8192515595038778585}
@@ -88,8 +88,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: Whip
+  - m_ConditionMode: 1
+    m_ConditionEvent: DoWhip
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
@@ -117,14 +117,14 @@ AnimatorController:
   m_Name: thiccboiWhipController
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Whip
-    m_Type: 4
+  - m_Name: Speed
+    m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Speed
-    m_Type: 1
+  - m_Name: DoWhip
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -176,7 +176,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Whip
+    m_ConditionEvent: DoWhip
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8192515595038778585}
@@ -257,9 +257,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
     m_EventTreshold: 0.5
-  - m_ConditionMode: 2
-    m_ConditionEvent: Whip
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8768865315190989902}
   m_Solo: 0
@@ -288,7 +285,7 @@ AnimatorStateMachine:
     m_Position: {x: 370, y: 140, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3030491476096397878}
-    m_Position: {x: 220, y: 270, z: 0}
+    m_Position: {x: 390, y: 210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8192515595038778585}
     m_Position: {x: 550, y: 270, z: 0}

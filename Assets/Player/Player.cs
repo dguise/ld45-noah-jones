@@ -6,18 +6,21 @@ public class Player : MonoBehaviour
 {
     private Vector3 _movement = new Vector3();
     private Rigidbody _rb;
-
+    private Animator _anim;
     [SerializeField] GameObject WhipActiveEffect;
 
     [SerializeField] private float Speed = 50;
     [SerializeField] private float TurnSpeed = 100;
+    [SerializeField] private Animator WhipAnimator;
     [SerializeField] private float WhipRange = 1000;
+
 
     private Quaternion _targetRotation;
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -28,8 +31,8 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // TODO: Play whip sound
-            GameObject go = Instantiate<GameObject>(WhipActiveEffect, transform.position, Quaternion.identity);
-            Destroy(go, 0.5f);
+            WhipAnimator.SetTrigger("DoWhip");
+            Whip();
             var hits = Physics.SphereCastAll(transform.position, WhipRange, Vector3.up);
             foreach(var hit in hits)
             {
@@ -38,6 +41,12 @@ public class Player : MonoBehaviour
                     animal.Scare(transform.position);
             }
         }
+    }
+
+    void Whip()
+    {
+        GameObject go = Instantiate<GameObject>(WhipActiveEffect, transform.position, Quaternion.identity);
+        Destroy(go, 0.5f);
     }
 
     private void FixedUpdate()
@@ -49,6 +58,8 @@ public class Player : MonoBehaviour
             _rb.velocity = newVel;
             transform.LookAt(transform.position + _movement);
         }
+
+        _anim.SetFloat("Speed", _rb.velocity.magnitude);
     }
 
     private void OnDrawGizmos()
