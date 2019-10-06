@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject Kangaroo;
     public GameObject Mammoo;
     public GameObject Pigo;
+    public GameObject Elk;
     public static GameManager Instance = null;
 
     public int score = 0;
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
     public int mammoths = 2;
     public int kangaroos = 5;
     public int pig = 10;
+    public int elk = 3;
 
     private void Awake()
     {
@@ -50,6 +52,11 @@ public class GameManager : MonoBehaviour
             Instantiate(Pigo, spawn, Pigo.transform.rotation);
         }
 
+        for (int i = 0; i < elk; i++)
+        {
+            var spawn = new Vector3(Random.Range(256, 300), Random.Range(6, 14), Random.Range(203, 223));
+            Instantiate(Elk, spawn, Elk.transform.rotation);
+        }
     }
 
     public void Reset()
