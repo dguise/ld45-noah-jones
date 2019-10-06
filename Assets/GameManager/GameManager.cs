@@ -12,8 +12,9 @@ public class GameManager : MonoBehaviour
 
     public int score = 0;
     private int animals;
-    public int mammoths = 3;
-    public int kangaroos = 6;
+    public int mammoths = 2;
+    public int kangaroos = 5;
+    public int pig = 10;
 
     private void Awake()
     {
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        animals = mammoths + kangaroos;
+        animals = (int)((mammoths + kangaroos + pig)*0.5);
         AddAnimals();
     }
 

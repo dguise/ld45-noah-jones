@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b89358d4b081741ab580456f32fb7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 500
+  JumpForce: 800
   Speed: 5
   RandomRange:
   - 1
