@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         for (int i=0; i < amount; i++)
         {
             var spawn = new Vector3(Random.Range(138, 145), Random.Range(6, 14), Random.Range(125, 145));
-            Instantiate(Animal, spawn, Quaternion.identity);
+            Instantiate(Animal, spawn, Animal.transform.rotation);
         }
             
     }

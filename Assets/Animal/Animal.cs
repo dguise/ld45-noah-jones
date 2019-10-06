@@ -41,6 +41,7 @@ public class Animal : MonoBehaviour
         }
     }
 
+
     private void Update()
     {
         switch (_state)
@@ -55,6 +56,16 @@ public class Animal : MonoBehaviour
                 Boarding();
                 break;
         }
+
+    }
+
+    private void FixedUpdate()
+    {
+        var dir = _rb.velocity;
+        dir.y = 0;
+
+        if (dir.magnitude > 0.3f)
+            transform.LookAt(transform.position + dir);
     }
 
     private void Idle()
@@ -89,14 +100,11 @@ public class Animal : MonoBehaviour
 
     public void Board(Vector3 position)
     {
-        if (transform.position.y < 6)
-        {
-            _state = State.Boarding;
-            _rb.AddForce(Vector3.up * JumpForce);
-            _target = position;
-            GameManager.Instance.AddScore(1);
-            StartCoroutine(this.DelayedDo(3, () => _state = State.Idle));
-        }
+        _state = State.Boarding;
+        _rb.AddForce(Vector3.up * JumpForce);
+        _target = position;
+        GameManager.Instance.AddScore(1);
+        StartCoroutine(this.DelayedDo(3, () => _state = State.Idle));
     }
 
     public void Leave()

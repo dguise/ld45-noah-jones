@@ -202,7 +202,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 44.749, y: 0, z: 0}
 --- !u!114 &42154219
 MonoBehaviour:
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704e3a2b8d4252b45a8585702d4658b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animal: {fileID: 2958547442556007336, guid: af27aa2ef57fcf94b99988f22b055057, type: 3}
+  Animal: {fileID: 868683341518951485, guid: e8b3640bc9f213247a2fc302311693fe, type: 3}
   score: 0
   animals: 5
 --- !u!4 &921278834 stripped
@@ -410,7 +410,7 @@ PrefabInstance:
     - target: {fileID: 8578955700589232081, guid: 07bbb74a6e1578349be41234e7f4cfb6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8578955700589232081, guid: 07bbb74a6e1578349be41234e7f4cfb6,
         type: 3}
@@ -639,6 +639,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8592475884400802382, guid: 5b252dabf620e8d4a8f22eed7950ea08,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8592475884400802382, guid: 5b252dabf620e8d4a8f22eed7950ea08,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8592475884400802382, guid: 5b252dabf620e8d4a8f22eed7950ea08,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b252dabf620e8d4a8f22eed7950ea08, type: 3}
