@@ -1438,6 +1438,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1746473100}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: ca55d3ec5dae15840b965b39730c30ff,
+        type: 3}
+      propertyPath: m_Name
+      value: thiccboiWhip
+      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: ca55d3ec5dae15840b965b39730c30ff,
         type: 3}
       propertyPath: m_Controller
@@ -1497,11 +1502,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: ca55d3ec5dae15840b965b39730c30ff,
-        type: 3}
-      propertyPath: m_Name
-      value: thiccboiWhip
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca55d3ec5dae15840b965b39730c30ff, type: 3}
@@ -3738,11 +3738,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8578955700589232080, guid: 07bbb74a6e1578349be41234e7f4cfb6,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07bbb74a6e1578349be41234e7f4cfb6, type: 3}
 --- !u!1001 &1541792180
@@ -4485,6 +4480,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 39ea506b4e29d994a89d8288fc6b9b24, type: 3}
   - {fileID: 8300000, guid: ae0485402236744488a3b40255f31e7b, type: 3}
   - {fileID: 8300000, guid: 4bcb543532b863543bd4c24f719d3831, type: 3}
+  - {fileID: 8300000, guid: e505be9b4f595fc42bc02ff779bf4b6d, type: 3}
+  - {fileID: 8300000, guid: e7fa0c35b02e9dc4fbf5c1b9473cbc99, type: 3}
+  - {fileID: 8300000, guid: 035552809ae777d4e84c40beb1c3a877, type: 3}
+  - {fileID: 8300000, guid: 160ed4d3b31d4a24a9c43607a48842fe, type: 3}
+  - {fileID: 8300000, guid: 58c6de88e34fb0547aa914ae051c6640, type: 3}
+  - {fileID: 8300000, guid: d010455b545bdb346b89516a3f45694a, type: 3}
+  - {fileID: 8300000, guid: e8cbaba77492fb5449fef704a8cbfd57, type: 3}
+  - {fileID: 8300000, guid: be53cffd6a771f3499a5045c2cb49673, type: 3}
+  - {fileID: 8300000, guid: d5c8ec9cd8819f54ca77f3f163d402af, type: 3}
+  - {fileID: 8300000, guid: 5fd5221b94b27a04799a508305ab17a4, type: 3}
+  - {fileID: 8300000, guid: 4c26dabb9a2d92b4c976b4d7f5cf6e6f, type: 3}
 --- !u!54 &1746473103
 Rigidbody:
   m_ObjectHideFlags: 0
