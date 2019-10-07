@@ -85,6 +85,9 @@ public class Animal : MonoBehaviour
     Coroutine delayedCalm = null;
     public void Scare(Vector3 position)
     {
+        if (_state == State.Boarding)
+            return;
+
         _state = State.Scared;
         direction = (transform.position - position).normalized;
         if (delayedCalm != null)
